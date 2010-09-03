@@ -436,6 +436,34 @@ LOCAL_SRC_FILES+= \
 	ripemd/rmd_one.c \
 	evp/m_ripemd.c
 
+ifdef OMAP_ENHANCEMENT
+LOCAL_SRC_FILES+= \
+	ec/ec_lib.c \
+	ec/ecp_smpl.c \
+	ec/ecp_mont.c \
+	ec/ecp_nist.c \
+	ec/ec_cvt.c \
+	ec/ec_mult.c \
+	ec/ec_err.c \
+	ec/ec_asn1.c \
+	ec/ec_curve.c \
+	ec/ec_key.c \
+	ec/ec_print.c \
+	ec/ec2_smpl.c \
+	ec/ec2_mult.c \
+	ecdsa/ecs_lib.c \
+	ecdsa/ecs_ossl.c \
+	ecdsa/ecs_err.c \
+	ecdsa/ecs_vrf.c \
+	ecdsa/ecs_sign.c \
+	ecdsa/ecs_asn1.c \
+	evp/m_ecdsa.c \
+	ecdh/ech_err.c \
+	ecdh/ech_key.c \
+	ecdh/ech_lib.c \
+	ecdh/ech_ossl.c
+endif
+
 LOCAL_CFLAGS += -DNO_WINDOWS_BRAINDEATH
 
 include $(LOCAL_PATH)/../android-config.mk

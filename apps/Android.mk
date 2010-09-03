@@ -24,6 +24,10 @@ LOCAL_C_INCLUDES := \
 
 LOCAL_CFLAGS := -DMONOLITH
 
+ifdef OMAP_ENHANCEMENT
+LOCAL_CFLAGS += -DOPENSSL_NO_ECDH
+endif
+
 include $(LOCAL_PATH)/../android-config.mk
 
 # These flags omit whole features from the commandline "openssl".
